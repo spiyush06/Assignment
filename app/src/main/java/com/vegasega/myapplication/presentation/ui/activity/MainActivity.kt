@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        mainBinding.idBtnToggle.setOnClickListener {
+        /*mainBinding.idBtnToggle.setOnClickListener {
             viewModel.translateText(list.get(0).name)
             adapter.notifyItemInserted(0)
 
@@ -108,12 +108,12 @@ class MainActivity : AppCompatActivity() {
                 viewModel.translateText(list.get(i).name)
                 adapter.notifyItemInserted(i)
             }
-        }
+        }*/
 
 
         viewModel.translation.observe(this) { translation ->
             //translationTextView.text = translation
-            Utils.showToastShort(this@MainActivity, translation)
+           // Utils.showToastShort(this@MainActivity, translation)
         }
 
     }
