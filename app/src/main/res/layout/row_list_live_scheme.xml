@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvdeveloper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_5sdp"
+            android:elevation="@dimen/_3sdp"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:src="@drawable/scheme"
+                        android:id="@+id/img_scheme_image"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"/>
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_status"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txv_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="Ramu"
+                            android:textAlignment="center"
+                            android:paddingStart="5dp"
+                            android:textColor="@color/white"
+                            android:ellipsize="marquee"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_weight="1.5"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Ramu"
+                        android:textAlignment="textStart"
+                        android:paddingStart="5dp"
+                        android:textColor="@color/black"
+                        android:ellipsize="marquee"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="#D3D3D3"/>
+
+                    <TextView
+                        android:id="@+id/txv_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:paddingStart="5dp"
+                        android:singleLine="true"
+                        android:text="Ramu"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/_5ssp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txv_end_at"
+                                android:layout_weight=".5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="Ramu"
+                                android:textAlignment="textStart"
+                                android:paddingStart="5dp"
+                                android:textColor="@color/black"
+                                android:ellipsize="marquee"
+                                android:textSize="@dimen/_8ssp" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="#D3D3D3"/>
+
+                            <TextView
+                                android:id="@+id/txv_user_scheme_status"
+                                android:layout_weight=".5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="Ramu"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:textAlignment="textStart"
+                                android:paddingStart="5dp"
+                                android:textColor="@color/black"
+                                android:ellipsize="marquee"
+                                android:textSize="@dimen/_8ssp" />
+
+                        </LinearLayout>
+
+
+
+                        <!--<LinearLayout
+                            android:layout_weight="1"
+                            android:weightSum="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_weight=".5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="Ramu"
+                                android:textAlignment="textStart"
+                                android:paddingStart="5dp"
+                                android:textColor="@color/black"
+                                android:ellipsize="marquee"
+                                android:textSize="@dimen/_8ssp"
+                                tools:ignore="NestedWeights" />
+
+
+
+                        </LinearLayout>-->
+
+                        <!--<TextView
+                            android:id="@+id/txv_end_at"
+                            android:layout_weight="1.5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="Ramu"
+                            android:textAlignment="textStart"
+                            android:paddingStart="5dp"
+                            android:textColor="@color/black"
+                            android:ellipsize="marquee"
+                            android:textSize="12sp" />-->
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>
