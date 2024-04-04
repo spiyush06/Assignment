@@ -34,7 +34,7 @@
 
                     <ImageView
                         android:src="@drawable/scheme"
-                        android:id="@+id/img_scheme_image"
+                        android:id="@+id/img_scheme"
                         android:layout_gravity="center"
                         android:layout_margin="@dimen/_2sdp"
                         android:layout_width="match_parent"

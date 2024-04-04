@@ -1,4 +1,4 @@
-package com.cheezycode.quickpagingdemo.paging
+package com.vegasega.myapplication.paging
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +9,7 @@ import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.vegasega.myapplication.R
+import com.vegasega.myapplication.databinding.ItemLoaderBinding
 
 
 class LoaderAdapter : LoadStateAdapter<LoaderAdapter.LoaderViewHolder>() {
@@ -18,39 +19,17 @@ class LoaderAdapter : LoadStateAdapter<LoaderAdapter.LoaderViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, loadState: LoadState): LoaderViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_loader, parent, false)
-        return LoaderViewHolder(view)
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = ItemLoaderBinding.inflate(inflater, parent, false)
+        return LoaderViewHolder(binding)
     }
 
-
-    class LoaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val progressBar = itemView.findViewById<ProgressBar>(R.id.progress_bar)
+    class LoaderViewHolder(private val binding: ItemLoaderBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(loadState: LoadState) {
-            progressBar.isVisible = loadState is LoadState.Loading
+            binding.executePendingBindings()
+            binding.progressBar.isVisible = loadState is LoadState.Loading
         }
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

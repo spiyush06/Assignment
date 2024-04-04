@@ -1,4 +1,4 @@
-package com.cheezycode.quickpagingdemo.paging
+package com.vegasega.myapplication.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
@@ -6,7 +6,7 @@ import com.vegasega.myapplication.data.model.Data
 import com.vegasega.myapplication.retrofit.SchemeAPI
 import java.lang.Exception
 
-class QuotePagingSource(private val schemeAPI: SchemeAPI) : PagingSource<Int, Data>() {
+class SchemePagingSource(private val schemeAPI: SchemeAPI) : PagingSource<Int, Data>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Data> {
         return try {
