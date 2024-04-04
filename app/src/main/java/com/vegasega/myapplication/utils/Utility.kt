@@ -1,20 +1,15 @@
-package com.vegasega.myapplication.util
+package com.vegasega.myapplication.utils
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.wifi.WifiManager
 import android.os.Build
-import android.text.TextUtils
-import android.text.format.Formatter
-import android.util.Log
-import android.util.Patterns
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-class Utils {
-
+class Utility {
     companion object {
 
         fun checkForInternet(context: Context): Boolean {
@@ -49,6 +44,7 @@ class Utils {
             }
         }
 
+        @RequiresApi(Build.VERSION_CODES.O)
         fun dateformat(strDate : String): String? {
             val firstApiFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
             val date = LocalDate.parse(strDate , firstApiFormat)
