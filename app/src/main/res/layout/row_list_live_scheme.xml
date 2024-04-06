@@ -103,7 +103,6 @@
                         android:ellipsize="marquee"
                         android:paddingStart="5dp"
                         android:singleLine="true"
-                        android:text="Ramu"
                         android:textAlignment="textStart"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15ssp" />

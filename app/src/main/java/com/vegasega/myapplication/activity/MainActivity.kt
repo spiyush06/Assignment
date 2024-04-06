@@ -16,14 +16,13 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     lateinit var adapter: SchemePagingAdapter
     lateinit var mainBinding: ActivityMainBinding
-
     private val viewModel by viewModels<SchemeViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        adapter = SchemePagingAdapter()
+        adapter = SchemePagingAdapter(false)
 
         mainBinding.schemeRecyclerview.layoutManager = LinearLayoutManager(this)
         mainBinding.schemeRecyclerview.setHasFixedSize(true)
@@ -35,5 +34,16 @@ class MainActivity : AppCompatActivity() {
         viewModel.list.observe(this, Observer {
             adapter.submitData(lifecycle, it)
         })
+
+        mainBinding.switchLanguage.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                mainBinding.switchLanguage.text = "Hindi"
+                adapter.fetchData(true)
+            } else {
+                mainBinding.switchLanguage.text = "English"
+                adapter.fetchData(false)
+            }
+        }
+
     }
 }
