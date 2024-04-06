@@ -18,6 +18,14 @@
         android:textOn="Hindi"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminate="true" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/scheme_recyclerview"
         android:layout_width="match_parent"

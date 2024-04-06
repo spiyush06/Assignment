@@ -85,6 +85,7 @@ class SchemePagingAdapter(isHindi: Boolean) : PagingDataAdapter<Data, SchemePagi
                     val spannable = boldTextDate("मान्य दिनांक ${dateformat(item.end_at)}")
                     binding.txvEndAt.text=spannable
                 }, onFailure = {})
+
             }
         }
     }
